@@ -1,5 +1,8 @@
 # Scala2HTML
 
+[![Build Status](https://travis-ci.com/droptheplot/scala2html.svg?branch=master)](https://travis-ci.com/droptheplot/scala2html)
+[![](https://jitpack.io/v/droptheplot/scala2html.svg)](https://jitpack.io/#droptheplot/scala2html)
+
 Small library to write HTML using simple Scala data structures.
 
 ## Installation
@@ -31,6 +34,7 @@ You'll need only these functions to remember:
 ```scala
 import scala.language.postfixOps
 import scala2html.{<, Tag}
+import scala2html.Enrich._
 
 <("div")
 // <div></div>
