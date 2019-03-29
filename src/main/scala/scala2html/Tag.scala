@@ -1,9 +1,5 @@
 package scala2html
 
-trait Stringable {
-  def toString: String
-}
-
 case class Tag(name: String,
                attrs: Seq[(String, String)],
                body: Seq[Stringable],
@@ -32,34 +28,4 @@ object Tag {
   }
 
   def renderBody(body: Seq[Stringable]): String = body.mkString
-}
-
-object Enrich {
-  implicit class RichString(private val underlying: String) extends Stringable {
-    override def toString: String = underlying.toString
-  }
-
-  implicit class RichInt(private val underlying: Int) extends Stringable {
-    override def toString: String = underlying.toString
-  }
-
-  implicit class RichFloat(private val underlying: Float) extends Stringable {
-    override def toString: String = underlying.toString
-  }
-
-  implicit class RichDouble(private val underlying: Double) extends Stringable {
-    override def toString: String = underlying.toString
-  }
-}
-
-object < {
-  def apply(n: String, a: (String, String)*): Tag = {
-    Tag(n, a, Seq[Stringable]())
-  }
-}
-
-object </ {
-  def apply(n: String, a: (String, String)*): Tag = {
-    Tag(n, a, Seq[Stringable](), empty = true)
-  }
 }

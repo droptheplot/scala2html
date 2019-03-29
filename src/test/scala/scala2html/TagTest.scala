@@ -4,7 +4,7 @@ import org.scalatest.{Assertion, FunSuite}
 
 import scala.language.postfixOps
 
-import scala2html.Enrich._
+import scala2html.implicits._
 
 class TagTest extends FunSuite {
   def assertTag(a: Tag, b: String): Assertion = {

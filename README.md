@@ -14,9 +14,9 @@ resolvers += "jitpack" at "https://jitpack.io"
 libraryDependencies += "com.github.droptheplot" % "scala2html" % "master-SNAPSHOT"
 ```
 
-Import single `Tag` class and it's special constructor `<`.
+Import `implicits` with default instances and constructors.
 ```scala
-import scala2html.{<, Tag}
+import scala2html.implicits._
 ```
 
 Enable postfix operator notation to use `/>` method for empty tags (optional).
@@ -32,9 +32,8 @@ You'll need only these functions to remember:
 * `/>` - Make `Tag` empty.
 
 ```scala
+import scala2html.implicits._
 import scala.language.postfixOps
-import scala2html.{<, Tag}
-import scala2html.Enrich._
 
 <("div")
 // <div></div>
