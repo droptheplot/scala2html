@@ -2,7 +2,7 @@ name := "Scala2HTML"
 
 organization := "com.github.droptheplot"
 
-version := "0.0.1"
+version := "1.0.0"
 
 scalaVersion := "2.12.8"
 

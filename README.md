@@ -11,7 +11,7 @@ Add dependency to `build.sbt`.
 
 ```scala
 resolvers += "jitpack" at "https://jitpack.io"
-libraryDependencies += "com.github.droptheplot" % "scala2html" % "master-SNAPSHOT"
+libraryDependencies += "com.github.droptheplot" % "scala2html" % "1.0.0"
 ```
 
 Import `implicits` with default instances and constructors.
